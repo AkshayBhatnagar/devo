@@ -65,7 +65,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git nvm aws colored-man-pages)
 
 ################################ Akshay's Configuration ################################
-ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_COLOR_SCHEME=light
 # Using font: SauceCodePro Nerd Font
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -102,7 +101,7 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 # Load
 POWERLEVEL9K_LOAD_CRITICAL_BACKGROUND='black'
 POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND='red'
-POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR=
+POWERLEVEL9K_LOAD_CRITICAL_VISUAL_IDENTIFIER_COLOR='orangered1'
 POWERLEVEL9K_LOAD_NORMAL_BACKGROUND='darkcyan'
 POWERLEVEL9K_LOAD_NORMAL_FOREGROUND='deepskyblue4'
 POWERLEVEL9K_LOAD_NORMAL_VISUAL_IDENTIFIER_COLOR='deepskyblue4'
@@ -132,6 +131,7 @@ alias updateNpm='npm update -g'
 alias updatePy='pip3 install --upgrade pip'
 
 ################################ Akshay's Configuration ################################
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
