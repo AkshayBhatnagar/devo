@@ -62,7 +62,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm aws colored-man-pages)
+plugins=(git npm aws colored-man-pages)
 
 ################################ Akshay's Configuration ################################
 POWERLEVEL9K_COLOR_SCHEME=light
@@ -125,11 +125,6 @@ POWERLEVEL9K_AWS_FOREGROUND=white
 
 AWS_PROFILE=akshay
 
-alias update='updatePy && updateAws && updateNpm'
-alias updateAws='pip3 install awscli --upgrade --user'
-alias updateNpm='npm update -g'
-alias updatePy='pip3 install --upgrade pip'
-
 ################################ Akshay's Configuration ################################
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source $ZSH/oh-my-zsh.sh
@@ -148,6 +143,9 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+if read -q "RequestUpdate?Update 'Homebrew' and all installed packages? (Y/y)"; then
+  brew update && brew upgrade && npm update -g
+fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -163,4 +161,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+# Allows switching between difference JDKs
+# jdk() {
+#        version=$1
+#        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+#        java -version
+# }
